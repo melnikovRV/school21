@@ -1,6 +1,5 @@
-# school21
 
 # Piscine Reloaded
-
+blablabla...
 # Libft
-it's third project after pool in 42.
+Oh my god... 5 peer..
