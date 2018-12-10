@@ -6,7 +6,7 @@
 /*   By: nsabre-c <nsabre-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 14:49:20 by nsabre-c          #+#    #+#             */
-/*   Updated: 2018/12/06 19:41:52 by nsabre-c         ###   ########.fr       */
+/*   Updated: 2018/12/10 11:30:36 by nsabre-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 void	ft_putendl(char const *s)
 {
-	write(1, s, strlen(s));
+	write(1, s, ft_strlen(s));
 	write(1, "\n", 1);
 }
