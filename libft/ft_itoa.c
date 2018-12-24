@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsabre-c <nsabre-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 14:46:42 by nsabre-c          #+#    #+#             */
-/*   Updated: 2018/12/06 19:37:36 by nsabre-c         ###   ########.fr       */
+/*   Created: 2018/12/13 17:22:22 by nsabre-c          #+#    #+#             */
+/*   Updated: 2018/12/13 17:22:23 by nsabre-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int		count_of_chars(int n)
+static int		count_of_chars(int n)
 {
 	int		count;
 
@@ -30,7 +30,7 @@ int		count_of_chars(int n)
 	return (count);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*res;
 	int		c;

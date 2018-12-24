@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsabre-c <nsabre-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 14:51:00 by nsabre-c          #+#    #+#             */
-/*   Updated: 2018/12/06 19:44:06 by nsabre-c         ###   ########.fr       */
+/*   Created: 2018/12/13 17:23:25 by nsabre-c          #+#    #+#             */
+/*   Updated: 2018/12/13 17:23:25 by nsabre-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*str;
 	char	*result;
 
-	if (s == NULL)
+	if (s == NULL || f == NULL)
 		return (NULL);
-	if (!(str = (char*)malloc(ft_strlen(s))))
+	if (!(str = (char*)malloc(ft_strlen(s) + 1)))
 		return (NULL);
 	result = str;
 	while (*s != 0)
@@ -29,6 +29,6 @@ char	*ft_strmap(char const *s, char (*f)(char))
 		str++;
 		s++;
 	}
-	*str = 0;
+	*str = '\0';
 	return (result);
 }

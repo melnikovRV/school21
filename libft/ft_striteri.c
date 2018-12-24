@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsabre-c <nsabre-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 14:50:31 by nsabre-c          #+#    #+#             */
-/*   Updated: 2018/11/27 14:50:31 by nsabre-c         ###   ########.fr       */
+/*   Created: 2018/12/13 17:23:17 by nsabre-c          #+#    #+#             */
+/*   Updated: 2018/12/13 17:23:17 by nsabre-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	unsigned int i;
 
 	i = 0;
-	while (*s != 0)
-	{
-		f(i, s);
-		i++;
-		s++;
-	}
+	if (s != NULL && f != NULL)
+		while (*s != 0)
+		{
+			f(i, s);
+			i++;
+			s++;
+		}
 }

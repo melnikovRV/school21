@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsabre-c <nsabre-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 14:51:07 by nsabre-c          #+#    #+#             */
-/*   Updated: 2018/12/06 19:44:15 by nsabre-c         ###   ########.fr       */
+/*   Created: 2018/12/13 17:23:30 by nsabre-c          #+#    #+#             */
+/*   Updated: 2018/12/13 17:23:30 by nsabre-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
-	if (!(str = (char*)malloc(ft_strlen(s))))
+	if (s == NULL || f == NULL)
+		return (NULL);
+	if (!(str = (char*)malloc(ft_strlen(s) + 1)))
 		return (NULL);
 	result = str;
 	while (*s != 0)
@@ -30,6 +32,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		s++;
 		i++;
 	}
-	*str = 0;
+	*str = '\0';
 	return (result);
 }

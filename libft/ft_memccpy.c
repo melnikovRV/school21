@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsabre-c <nsabre-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 14:48:25 by nsabre-c          #+#    #+#             */
-/*   Updated: 2018/11/27 14:48:25 by nsabre-c         ###   ########.fr       */
+/*   Created: 2018/12/13 17:22:42 by nsabre-c          #+#    #+#             */
+/*   Updated: 2018/12/13 17:22:42 by nsabre-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,20 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t	i;
-	char	*ptrsrc;
-	char	*ptrdst;
+	unsigned char		*p_dst;
+	unsigned char		*p_src;
+	unsigned char		u_c;
 
-	ptrsrc = (char *)src;
-	ptrdst = (char *)dst;
-	i = 0;
-	while (i < n)
+	p_dst = (unsigned char *)dst;
+	p_src = (unsigned char *)src;
+	u_c = c;
+	if (n)
 	{
-		*(ptrdst + i) = *(ptrsrc + i);
-		if (*(ptrsrc + i) == c)
-			return (ptrdst + i + 1);
-		i++;
+		while (n-- != 0)
+		{
+			if ((*p_dst++ = *p_src++) == u_c)
+				return (p_dst);
+		}
 	}
-	return (NULL);
+	return (0);
 }

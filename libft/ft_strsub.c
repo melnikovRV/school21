@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsabre-c <nsabre-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 14:52:24 by nsabre-c          #+#    #+#             */
-/*   Updated: 2018/12/06 19:48:03 by nsabre-c         ###   ########.fr       */
+/*   Created: 2018/12/13 17:23:43 by nsabre-c          #+#    #+#             */
+/*   Updated: 2018/12/13 17:23:43 by nsabre-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*str;
 	int		i;
 
-	if (!(str = (char*)malloc(len)))
+	if (s == NULL || start > ft_strlen(s))
+		return (NULL);
+	if (!(str = (char*)malloc(len + 1)))
 		return (NULL);
 	i = 0;
 	while (start != 0)
@@ -33,5 +35,6 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		s++;
 		len--;
 	}
+	*(str + i) = '\0';
 	return (str);
 }

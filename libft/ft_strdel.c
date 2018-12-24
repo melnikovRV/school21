@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsabre-c <nsabre-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 14:50:10 by nsabre-c          #+#    #+#             */
-/*   Updated: 2018/12/06 19:43:21 by nsabre-c         ###   ########.fr       */
+/*   Created: 2018/12/13 17:23:08 by nsabre-c          #+#    #+#             */
+/*   Updated: 2018/12/13 17:23:08 by nsabre-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 void	ft_strdel(char **as)
 {
-	if (*as == NULL)
-		return ;
-	free(*as);
-	*as = NULL;
+	if (as != NULL && *as != NULL)
+		ft_memdel((void **)as);
 }
